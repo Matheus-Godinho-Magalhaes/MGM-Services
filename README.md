@@ -1,5 +1,4 @@
 # MGM Services - Service Marketplace
-#### Video Demo: https://youtu.be/pCvmzOasFEA
 #### Description:
 
 MGM Services is an online marketplace designed to connect clients with service providers through a streamlined and accessible platform. This project, created as the final project for Harvard’s CS50x course, allows users to register as either a Client or a Provider. Clients can browse, filter, and book services based on their preferences, while Providers can manage their service listings and upcoming appointments.
