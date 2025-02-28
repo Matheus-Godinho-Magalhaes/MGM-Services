@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Avaliar
+{% endblock %}
+
+{% block main %}
+    <h2>Digite o nome do Prestador de Serviço que deseja avaliar</h2>
+
+    <form action="/rate_provider" method="post">
+        <div class="mb-3">
+            <input type="text" autofocus name="name" placeholder="Digite o nome aqui">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </div>
+    </form>
+{% endblock %}

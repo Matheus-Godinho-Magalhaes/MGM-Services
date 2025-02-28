@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Editar Perfil
+{% endblock %}
+
+{% block main %}
+    <h2>Perfil do Prestador de Serviço</h2>
+    <form action="/profile" method="post">
+        <!-- Tipo do serviço a ser oferecido -->
+        <div class="mb-3">
+            <label for="service_type">Tipo de Serviço:</label>
+            <input type="text" class="form-control" name="service_type" value="{{ service.service_type if service else '' }}" required placeholder="Ex.: Manutenção de Computadores">
+        </div>
+        <!-- Preço cobrado pelo serviço -->
+        <div class="mb-3">
+            <label for="price">Preço:</label>
+            <input type="number" class="form-control" name="price" step="0.01" value="{{ service.price if service else '' }}" required placeholder="R$00,00" min="0">
+        </div>
+        <!-- Localização do Prestador de Serviços -->
+        <div class="mb-3">
+            <label for="location">Localização:</label>
+            <input type="text" class="form-control" name="location" value="{{ service.location if service else '' }}" required placeholder="Ex.: Belo Horizonte - MG">
+        </div>
+        <button type="submit" class="btn btn-primary">Editar Perfil</button>
+    </form>
+{% endblock %}

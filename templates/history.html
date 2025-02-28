@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    {% if pending_appointments %}
+    <div class="alert alert-info">
+        Você tem novos pedidos de agendamento pendentes!
+    </div>
+    {% endif %}
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Data do Serviço</th>
+                <th>Nome do Prestador de Serviço</th>
+                <th>Tipo de Serviço</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in rows %}
+            <tr class="align-middle">
+                <td>{{ appointment.service_date }}</td>
+                <td>{{ appointment.username }}</td>
+                <td>{{ appointment.service_type }}</td>
+                <td>{{ appointment.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+
+{% endblock %}
+
+

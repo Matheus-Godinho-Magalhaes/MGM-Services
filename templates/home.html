@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<div class="container mt-5">
+    <div class="text-center">
+        <h1>Bem-vindos ao MGM Serviços</h1>
+        <p class="lead mt-4">
+            O MGM Serviços é um marketplace dedicado a conectar pessoas que precisam de serviços com profissionais qualificados.
+            Aqui você pode criar uma conta e escolher entre dois perfis:
+        </p>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Seção para Clientes -->
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header bg-primary text-white">Para Clientes</div>
+                <div class="card-body">
+                    <p>Se você está em busca de serviços qualificados, crie uma conta de Cliente. Como Cliente, você poderá:</p>
+                    <ul>
+                        <li>Pesquisar por prestadores de serviços em diversas áreas</li>
+                        <li>Acessar perfis detalhados dos prestadores</li>
+                        <li>Avaliar prestadores e deixar comentários após o serviço</li>
+                        <li>Agendar serviços diretamente pela plataforma</li>
+                    </ul>
+                    <a href="/register" class="btn btn-primary">Cadastre-se como Cliente</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção para Prestadores de Serviço -->
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header bg-success text-white">Para Prestadores de Serviço</div>
+                <div class="card-body">
+                    <p>Profissionais podem se registrar como Prestadores de Serviço e usufruir de uma plataforma para:</p>
+                    <ul>
+                        <li>Anunciar seus serviços e definir seus preços</li>
+                        <li>Receber avaliações e feedback dos clientes</li>
+                        <li>Gerenciar seus agendamentos diretamente pelo painel do prestador</li>
+                        <li>Alcançar novos clientes em potencial</li>
+                    </ul>
+                    <a href="/register" class="btn btn-success">Cadastre-se como Prestador</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <p>Junte-se ao MGM Serviços e facilite a conexão entre clientes e prestadores de serviços qualificados!</p>
+        <a href="/search" class="btn btn-outline-secondary">Explorar Prestadores de Serviço</a>
+    </div>
+</div>
+{% endblock %}

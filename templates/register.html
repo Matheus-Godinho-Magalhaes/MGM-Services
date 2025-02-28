@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <!-- Nome -->
+        <div class="mb-3">
+            <input autocomplete="off" autofocus required class="form-control mx-auto w-auto" name="username" placeholder="Nome" type="text">
+        </div>
+        <!-- Email -->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" required name="email" placeholder="Email" type="email">
+        </div>
+        <!-- Senha -->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+        </div>
+        <!-- Conferindo senha -->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password (again)" type="password">
+        </div>
+        <!-- Escolhendo entre Cliente ou prestador de serviço -->
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="role">
+                <option disabled selected>Selecionar</option>
+                {% for op in options %}
+
+                    <option value="{{op}}">{{ op }}</option>
+
+                {% endfor %}
+            </select>
+        </div>
+        <!-- Botão de enviar -->
+         <button class="btn btn-primary btn-lg" type="submit">Register</button>
+    </form>
+
+
+{% endblock %}
